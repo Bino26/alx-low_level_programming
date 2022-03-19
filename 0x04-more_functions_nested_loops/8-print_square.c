@@ -1,4 +1,4 @@
-a#include "main.h"
+#include "main.h"
 /**
  * print_square - Prints the square line dependent on integer n.
  * @n: the number of lines using '#' characters
