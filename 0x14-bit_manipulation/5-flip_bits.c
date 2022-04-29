@@ -7,6 +7,7 @@
  *
  * Return: 1 on sucees, -1 on failure
  */
+
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int k;
@@ -19,3 +20,5 @@ int clear_bit(unsigned long int *n, unsigned int index)
 
 	return (k);
 }
+
+
