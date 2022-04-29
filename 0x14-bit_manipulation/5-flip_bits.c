@@ -1,24 +1,22 @@
 #include "main.h"
 
 /**
- * clear_bit - set value of bit to 0 at a given index
- * @n: pointer of unsigned int
- * @index: index of the bit
+ * flip_bits - Counts the number of bits needed to be
+ *             flipped to get from one number to another.
+ * @n: The number.
+ * @m: The number to flip n to.
  *
- * Return: 1 on sucees, -1 on failure
+ * Return: The necessary number of bits to flip to get from n to m.
  */
-
-int clear_bit(unsigned long int *n, unsigned int index)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int k;
+	unsigned long int xor = n ^ m, bits = 0;
 
+	while (xor > 0)
+	{
+		bits += (xor & 1);
+		xor >>= 1;
+	}
 
-	for (k = 0; n || index; n >>= 1, m >>= 1)
-		if ((n & 1) != (m & 1))
-			k++;
-
-
-	return (k);
+	return (bits);
 }
-
-
